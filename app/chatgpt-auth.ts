@@ -19,6 +19,11 @@ const SIGN_OUT_PATH = "/signout-with-chatgpt";
 const CALLBACK_PATH = "/callback";
 
 export async function getChatGPTUser(): Promise<ChatGPTUser | null> {
+  // The oai-* headers are trusted ONLY in ChatGPT Sites, where the gateway
+  // injects them. On Vercel visitors can forge those HTTP headers. Until a
+  // verified standalone identity provider is wired, deny authentication.
+  // Never grant ownership or admin access based on unverified request headers.
+  if (process.env.VERCEL) return null;
   const requestHeaders = await headers();
   const userId = requestHeaders.get(USER_ID_HEADER);
   const email = requestHeaders.get(USER_EMAIL_HEADER);

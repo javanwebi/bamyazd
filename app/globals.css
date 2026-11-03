@@ -242,3 +242,59 @@ input:focus,textarea:focus,select:focus{
   .how-card>div>b{left:17px;top:14px}
   .search-panel{box-shadow:0 10px 28px rgba(0,0,0,.20)}
 }
+
+/* Logo-inspired architectural engraving, November 2026.
+   Original black base + subtle metallic gold arcs and roofline; no yellow fill.
+   Background graphics live on body itself, so menus, modals and click targets
+   retain their existing stacking contexts and pointer behavior. */
+body{
+  background-color:#111315;
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20950%20710%22%20fill%3D%22none%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22a%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22950%22%20y2%3D%22680%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%2349331b%22%2F%3E%3Cstop%20offset%3D%22.46%22%20stop-color%3D%22%23c99f4e%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%236c4a23%22%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23c99f4e%22%20stop-opacity%3D%22.17%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c99f4e%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Cellipse%20cx%3D%22670%22%20cy%3D%22250%22%20rx%3D%22320%22%20ry%3D%22265%22%20fill%3D%22url(%23b)%22%2F%3E%3Cg%20stroke%3D%22url(%23a)%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M951%2076C706%2033%20491%2093%20371%20243S196%20496%2039%20515%22%20stroke-width%3D%221.65%22%20opacity%3D%22.52%22%2F%3E%3Cpath%20d%3D%22M970%20123C728%2076%20550%20113%20443%20256S240%20538%2092%20562%22%20stroke-width%3D%22.85%22%20opacity%3D%22.34%22%2F%3E%3Cpath%20d%3D%22M946%20172C720%20115%20568%20146%20488%20266S293%20545%20172%20578%22%20stroke-width%3D%22.65%22%20opacity%3D%22.25%22%2F%3E%3Cpath%20d%3D%22M305%20402L561%20181%20889%20403%22%20stroke-width%3D%221.4%22%20opacity%3D%22.43%22%2F%3E%3Cpath%20d%3D%22M369%20421L569%20247%20805%20426%22%20stroke-width%3D%22.8%22%20opacity%3D%22.29%22%2F%3E%3Cpath%20d%3D%22M640%20283l34%200%200%2034%20-34%200zM686%20283l34%200%200%2034%20-34%200zM640%20329l34%200%200%2034%20-34%200zM686%20329l34%200%200%2034%20-34%200z%22%20stroke-width%3D%22.8%22%20opacity%3D%22.27%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20950%20710%22%20fill%3D%22none%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22a%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22950%22%20y2%3D%22680%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%2349331b%22%2F%3E%3Cstop%20offset%3D%22.46%22%20stop-color%3D%22%23c99f4e%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%236c4a23%22%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23c99f4e%22%20stop-opacity%3D%22.17%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c99f4e%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Cellipse%20cx%3D%22670%22%20cy%3D%22250%22%20rx%3D%22320%22%20ry%3D%22265%22%20fill%3D%22url(%23b)%22%2F%3E%3Cg%20stroke%3D%22url(%23a)%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M951%2076C706%2033%20491%2093%20371%20243S196%20496%2039%20515%22%20stroke-width%3D%221.65%22%20opacity%3D%22.52%22%2F%3E%3Cpath%20d%3D%22M970%20123C728%2076%20550%20113%20443%20256S240%20538%2092%20562%22%20stroke-width%3D%22.85%22%20opacity%3D%22.34%22%2F%3E%3Cpath%20d%3D%22M946%20172C720%20115%20568%20146%20488%20266S293%20545%20172%20578%22%20stroke-width%3D%22.65%22%20opacity%3D%22.25%22%2F%3E%3Cpath%20d%3D%22M305%20402L561%20181%20889%20403%22%20stroke-width%3D%221.4%22%20opacity%3D%22.43%22%2F%3E%3Cpath%20d%3D%22M369%20421L569%20247%20805%20426%22%20stroke-width%3D%22.8%22%20opacity%3D%22.29%22%2F%3E%3Cpath%20d%3D%22M640%20283l34%200%200%2034%20-34%200zM686%20283l34%200%200%2034%20-34%200zM640%20329l34%200%200%2034%20-34%200zM686%20329l34%200%200%2034%20-34%200z%22%20stroke-width%3D%22.8%22%20opacity%3D%22.27%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+    radial-gradient(ellipse 56% 16% at 82% 12%,rgba(191,147,68,.105),transparent 80%),
+    radial-gradient(ellipse 42% 15% at 11% 57%,rgba(178,129,56,.075),transparent 78%),
+    radial-gradient(ellipse 50% 15% at 88% 91%,rgba(197,154,75,.065),transparent 78%),
+    linear-gradient(125deg,#17191a 0%,#101213 48%,#161718 100%);
+  background-repeat:no-repeat;
+  background-size:
+    min(78vw,920px) auto,
+    min(66vw,760px) auto,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  background-position:
+    right 12% top 350px,
+    left -18% top 1670px,
+    center,
+    center,
+    center,
+    center;
+}
+/* Subtle golden detailing is reserved for the most important black surfaces. */
+.search-panel{
+  background:
+    linear-gradient(115deg,rgba(184,142,70,.065),transparent 36%),
+    linear-gradient(145deg,#202122 0%,#181a1b 72%,#1d1e1f 100%);
+  border-color:rgba(190,150,81,.26);
+}
+.owner-banner{
+  background:
+    radial-gradient(ellipse 52% 92% at 0% 60%,rgba(195,150,75,.12),transparent 79%),
+    linear-gradient(113deg,#242321,#191b1d 62%,#202020 100%);
+}
+footer{
+  background:
+    radial-gradient(ellipse 65% 80% at 88% 5%,rgba(187,142,67,.09),transparent 76%),
+    linear-gradient(110deg,#18191a,#111314 65%,#1a1a19);
+}
+@media(max-width:800px){
+  body{
+    background-size: 110vw auto,100vw auto,100% 100%,100% 100%,100% 100%,100% 100%;
+    background-position: right -22vw top 510px,left -37vw top 1840px,center,center,center,center;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  body{background-attachment:scroll}
+}

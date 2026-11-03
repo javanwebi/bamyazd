@@ -23,6 +23,7 @@
       }
     ],
     "paths": {
+      "estate-platform": ["./lib/cloudflare-estate-env.ts"],
       "@/*": [
         "./*"
       ]

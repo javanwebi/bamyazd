@@ -426,10 +426,10 @@ header nav button:hover,header nav .nav-active{color:#e5c48b}
   background:linear-gradient(90deg,transparent,rgba(250,214,149,.45),transparent);
 }
 .market-main .listings-section .section-head h2{
-  color:#f6e9cf;
-  text-shadow:0 2px 14px rgba(23,18,13,.35);
+  color:#271d12;
+  text-shadow:0 1px 0 rgba(255,234,191,.35);
 }
-.market-main .listings-section .section-head .eyebrow{color:#f2d4a0}
+.market-main .listings-section .section-head .eyebrow{color:#59401e}
 .market-main .listings-section .section-head>p{color:#e1cba9}
 .market-main .listings-section .result-tools{color:#e8dbc7}
 .market-main .listings-section .sample-notice{

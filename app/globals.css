@@ -244,357 +244,435 @@ input:focus,textarea:focus,select:focus{
 }
 
 
-
-
-/* BAM YAZD — MODERN LUXURY / BRUSHED GOLD & CHARCOAL
-   Actual material surfaces replace both the nearly-black background and the
-   oversaturated gold gradient experiments. No images, logic, API, or layout
-   are replaced. The logo's antique-gold family determines the highlights. */
+/* BAM YAZD · PRIVATE ESTATE EDITORIAL · 2026
+   Inspired by dark, photo-first luxury property sites such as Hallmark.
+   A restrained single-gold (#ECB122) and charcoal system.
+   Hero images, content, breakpoints, behavior and data are retained.
+   Unlike previous drafts: no full-width gold wash, no brown/cream panels.
+*/
 :root{
-  --green:#ba955f; --gold:#c4a06c; --sage:#d8bd8f;
-  --deep:#201d19; --cream:#e7d6b8; --line:#796348;
-  --ink:#f2ece1; --muted:#c4b5a1;
-  --bam-black:#201f1d; --bam-bronze:#725638;
-  --bam-antique:#ab8250; --bam-metal:#c6a16b; --bam-champagne:#e6cfaa;
+  --green:#ECB122;
+  --gold:#ECB122;
+  --sage:#d7ad4c;
+  --deep:#111213;
+  --cream:#191a1b;
+  --line:rgba(236,177,34,.24);
+  --ink:#f4f1e9;
+  --muted:#aca9a2;
+  --bam-gold:#ECB122;
+  --bam-gold-hover:#f7c24b;
+  --bam-black:#111213;
+  --bam-surface:#1b1c1d;
+  --bam-border:rgba(236,177,34,.22);
 }
+html{background:#101112}
 body{
-  background-color:#80613f;
+  color:var(--ink);
   background:
-    radial-gradient(ellipse 58% 24% at 88% 5%,rgba(247,222,172,.28),transparent 80%),
-    radial-gradient(ellipse 70% 30% at 7% 85%,rgba(209,167,103,.25),transparent 78%),
-    linear-gradient(128deg,#4c3d2d 0%,#866947 37%,#a4855b 59%,#5b4936 100%);
+    radial-gradient(ellipse 55% 19% at 93% 14%,rgba(236,177,34,.062),transparent 80%),
+    radial-gradient(ellipse 48% 21% at 3% 67%,rgba(236,177,34,.048),transparent 80%),
+    #121314;
 }
 .topbar{
-  color:#f7ebd7;
-  background:linear-gradient(to left,#2a251f 0%,#473824 48%,#8c6940 84%,#654a2c 100%);
-  border-bottom:1px solid rgba(239,207,149,.42);
+  background:#151515;
+  border-bottom:1px solid rgba(236,177,34,.24);
+  color:#c6c3bd;
 }
-.topbar .rotating-contact>span:not(.contact-switch){color:#e7d9be}
-.topbar .rotating-contact>b{color:#f0d3a0}
+.topbar .rotating-contact>span:not(.contact-switch){color:#cbc6bd}
+.topbar .rotating-contact>b{color:#e9bb50}
 header{
-  background:
-    linear-gradient(115deg,rgba(229,192,125,.035),transparent 47%),
-    linear-gradient(to left,#191a19 0%,#27231e 68%,#443224 100%);
-  border-bottom:1px solid rgba(218,181,117,.42);
-  box-shadow:0 10px 30px rgba(25,21,16,.23);
+  background:linear-gradient(180deg,rgba(20,21,22,.99),rgba(12,13,14,.99));
+  border-bottom:1px solid rgba(236,177,34,.28);
+  box-shadow:0 9px 25px rgba(0,0,0,.20);
 }
-header .brand b{color:#d5b67f}
-header .brand small{color:#c0b5a5}
-header nav button{color:#d4ccbe}
-header nav button:hover,header nav button.nav-active{color:#e9cca0}
-.brand-logo{background:#080808}
+header .brand b{color:#ECB122}
+header .brand small{color:#b8b3a8}
+header nav button{color:#dbd7cf}
+header nav button.nav-active{color:#ECB122}
+.nav-active::after{background:#ECB122;height:2px}
+.brand-logo,footer .brand-logo{background:#050505}
+.brand-icon{background:#242118;color:#ECB122;border-color:rgba(236,177,34,.38)}
 .primary{
-  color:#21190f;
-  background:
-    linear-gradient(180deg,rgba(255,249,224,.19),transparent 45%),
-    linear-gradient(112deg,#a77d47 0%,#d0ae79 42%,#e6ce9e 53%,#b48a51 100%);
-  border:1px solid rgba(255,234,186,.39);
-  box-shadow:inset 0 1px 0 rgba(255,249,227,.37),0 8px 22px rgba(28,20,11,.20);
+  color:#161410;
+  background:#ECB122;
+  border:1px solid #ECB122;
+  box-shadow:0 4px 15px rgba(0,0,0,.16);
+  transition:background-color .22s ease,border-color .22s ease,box-shadow .22s ease,transform .22s ease;
 }
-.primary:hover{
-  color:#21190f;
-  background:linear-gradient(112deg,#b18a54,#ead3a3 55%,#bd925c);
-  box-shadow:0 10px 24px rgba(28,20,11,.25);
+.primary:disabled{transform:none}
+.outline{
+  color:#e4c378;
+  background:#1a1b1c;
+  border:1px solid rgba(236,177,34,.44);
+  transition:background-color .22s ease,border-color .22s ease,color .22s ease,transform .22s ease;
 }
-.outline{background:#292623;color:#ead8bb;border:1px solid rgba(209,170,110,.49)}
-.outline:hover{background:#3d3124;border-color:#d2ac73}
+.light-button{
+  color:#111;
+  background:#ECB122;
+  border:1px solid #ECB122;
+  box-shadow:0 6px 17px rgba(0,0,0,.20);
+  font-weight:600;
+  transition:background-color .22s ease,color .22s ease,box-shadow .22s ease,transform .22s ease;
+}
+.text-button{color:#e3b656;transition:color .22s ease}
 .hero-slider{
-  background:#171716;
-  border-bottom:3px solid #bd9560;
-  box-shadow:0 16px 35px rgba(21,18,15,.27);
+  background:#0f0f10;
+  border-bottom:1px solid rgba(236,177,34,.54);
+  box-shadow:0 18px 30px rgba(0,0,0,.28);
 }
+.hero-arrow-buttons{
+  background:rgba(13,14,15,.82);
+  border-color:rgba(236,177,34,.54);
+  color:#f5d386;
+}
+.hero-arrow-buttons button{color:#f5d386}
+.hero-page-buttons button span{background:rgba(248,220,160,.45)}
+.hero-page-buttons button.active span{background:#ECB122}
 
-/* Entrance: a wide brushed antique-gold surface behind a dark search console. */
-.market-main{background:#9e8057;overflow-x:clip}
+/* Quiet photographic search gallery, not a gold-colored full screen. */
+.market-main{background:#141516;overflow-x:clip}
 .discovery-stage{
   position:relative;
   isolation:isolate;
   overflow:hidden;
-  padding:49px 0 36px;
+  padding:39px 0 30px;
   background:
-    radial-gradient(ellipse 50% 100% at 15% -28%,rgba(255,245,211,.46),transparent 72%),
-    linear-gradient(107deg,transparent 15%,rgba(255,248,225,.14) 32%,transparent 53%),
-    repeating-linear-gradient(100deg,rgba(251,231,189,.026) 0 1px,transparent 1px 7px),
-    linear-gradient(111deg,#6b4d2d 0%,#ab8550 17%,#d2ae7a 33%,#ead5b2 47%,#c09a64 64%,#926e44 84%,#6a5035 100%);
-  border-bottom:1px solid rgba(250,226,183,.40);
-  box-shadow:inset 0 2px 0 rgba(255,240,200,.19);
+    radial-gradient(ellipse 38% 68% at 5% 70%,rgba(236,177,34,.10),transparent 75%),
+    linear-gradient(120deg,#18191a 0%,#202020 42%,#141516 74%,#101112 100%);
+  border-bottom:1px solid rgba(236,177,34,.17);
 }
 .discovery-stage::before{
   content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  z-index:0;
+  position:absolute;inset:0;
+  z-index:0;pointer-events:none;
   background:
-    linear-gradient(155deg,transparent 37%,rgba(72,49,25,.18) 37.2%,transparent 38%),
-    linear-gradient(155deg,transparent 67%,rgba(255,244,211,.22) 67.2%,transparent 68%);
+    linear-gradient(153deg,transparent 0 78%,rgba(236,177,34,.075) 78.04% 78.17%,transparent 78.21%),
+    linear-gradient(153deg,transparent 0 84%,rgba(236,177,34,.06) 84.04% 84.14%,transparent 84.18%);
 }
 .discovery-stage::after{
   content:"";
-  position:absolute;
-  width:54vw;max-width:780px;height:142%;
-  left:-26vw;top:-24%;
-  border:1px solid rgba(255,239,197,.32);
-  border-radius:50%;
-  box-shadow:0 0 0 43px rgba(246,216,159,.04),0 0 0 100px rgba(72,49,26,.055);
-  transform:rotate(-16deg);
-  pointer-events:none;
-  z-index:0;
+  position:absolute;pointer-events:none;z-index:0;
+  top:22px;bottom:22px;right:max(14px,calc((100vw - 1316px)/2));
+  width:1px;
+  background:linear-gradient(180deg,transparent,rgba(236,177,34,.44),transparent);
 }
 .discovery-stage>.search-panel,.discovery-stage>.categories{position:relative;z-index:1}
 .discovery-stage>.search-panel{
   margin-top:0;
   background:
-    radial-gradient(ellipse 75% 84% at 100% 0%,rgba(172,129,68,.20),transparent 81%),
-    linear-gradient(145deg,#302c26 0%,#1b1c1c 56%,#292722 100%);
-  border:1px solid rgba(242,208,152,.62);
-  border-radius:16px;
-  box-shadow:0 22px 48px rgba(47,32,18,.33),inset 0 1px 0 rgba(255,247,220,.09);
+    radial-gradient(ellipse 40% 180% at 100% -20%,rgba(236,177,34,.07),transparent 81%),
+    linear-gradient(140deg,#222324,#18191a 70%,#1b1c1d);
+  border:1px solid rgba(236,177,34,.27);
+  border-radius:14px;
+  box-shadow:0 15px 40px rgba(0,0,0,.27),inset 0 1px 0 rgba(255,255,255,.025);
 }
 .discovery-stage>.search-panel::before{
-  content:"";position:absolute;top:-1px;left:13%;right:13%;height:2px;
-  background:linear-gradient(90deg,transparent,#f6e0b9,transparent);
+  content:"";
+  position:absolute;top:-1px;right:10%;width:110px;height:2px;
+  background:linear-gradient(90deg,transparent,#ECB122,transparent);
   pointer-events:none;
 }
-.discovery-stage .search-tabs{border-bottom-color:#4c4439}
-.discovery-stage .search-tabs button{color:#c4baaa}
-.discovery-stage .search-tabs button.selected{color:#edcf9b}
-.discovery-stage .search-tabs .selected:after{background:#ddb67e}
-.discovery-stage .search-fields label{border-left-color:#52483a}
-.discovery-stage .search-fields label>span{color:#cfbe9f}
-.discovery-stage .search-fields input,
-.discovery-stage .search-fields select{color:#f1e9db}
-.discovery-stage .categories{padding:27px 0 0;gap:13px}
+.search-tabs{border-bottom-color:rgba(236,177,34,.15)}
+.search-tabs button{color:#aea9a0}
+.search-tabs button.selected{color:#ECB122}
+.search-tabs .selected::after{background:#ECB122;height:2px}
+.search-fields label{border-left-color:rgba(236,177,34,.17)}
+.search-fields label>span{color:#c9c4ba}
+.search-fields input,.search-fields select{color:#eee9e0}
+.search-fields input::placeholder{color:#98958e}
+.filter-on{color:#ECB122}
+.discovery-stage .categories{
+  gap:13px;padding:25px 0 3px;
+}
 .discovery-stage .categories>button{
-  min-height:73px;
-  background:linear-gradient(155deg,#332d24 0%,#222221 100%);
-  border:1px solid rgba(245,219,172,.33);
-  color:#e9d9c0;
-  box-shadow:0 9px 22px rgba(44,30,18,.17);
+  min-height:70px;
+  background:#202122;
+  border:1px solid rgba(236,177,34,.16);
+  color:#e6e1d9;
+  box-shadow:0 5px 15px rgba(0,0,0,.12);
+  transition:transform .24s ease,border-color .24s ease,box-shadow .24s ease,color .24s ease,background-color .24s ease;
 }
-.discovery-stage .categories>button>svg:first-child{color:#e0b980}
-.discovery-stage .categories>button:hover,
+.discovery-stage .categories>button>svg:first-child{color:#ECB122}
+.discovery-stage .categories>button>svg:last-child{color:#b4ada1}
 .discovery-stage .categories>button.category-active{
-  border-color:#f0d5a7;
-  box-shadow:0 12px 25px rgba(39,28,16,.24);
+  background:#29261e;
+  border-color:rgba(236,177,34,.73);
+  box-shadow:inset 0 0 0 1px rgba(236,177,34,.08);
 }
-.discovery-stage .categories>button:nth-child(2),
-.discovery-stage .categories>button:nth-child(4){
-  background:
-    linear-gradient(180deg,rgba(255,245,209,.23),transparent 46%),
-    linear-gradient(112deg,#b28b54,#e3c699 55%,#b58d58);
-  color:#251b12;border-color:rgba(255,237,199,.64);
-}
-.discovery-stage .categories>button:nth-child(2)>svg,
-.discovery-stage .categories>button:nth-child(4)>svg{color:#49341d}
-.discovery-stage .categories>button:nth-child(2):hover,
-.discovery-stage .categories>button:nth-child(4):hover{background:linear-gradient(112deg,#c49c64,#efd7ae 54%,#c59b63)}
+.discovery-stage .categories>button.category-active>svg:last-child{color:#ECB122}
 
-/* Listings: matte champagne GOLD is the full-width wall; dark stone cards pop. */
+/* Editorial listings section with a black background and a fine gold frame. */
 .market-main .listings-section{
-  position:relative;
-  isolation:isolate;
-  padding-top:70px;padding-bottom:83px;
+  position:relative;isolation:isolate;
+  padding-top:76px;padding-bottom:89px;
 }
 .market-main .listings-section::before{
-  content:"";position:absolute;left:50%;top:0;
+  content:"";
+  position:absolute;left:50%;top:0;
   width:100vw;height:100%;transform:translateX(-50%);
-  z-index:0;pointer-events:none;
+  pointer-events:none;z-index:0;
   background:
-    radial-gradient(ellipse 55% 52% at 92% 0%,rgba(255,248,222,.55),transparent 83%),
-    linear-gradient(145deg,rgba(67,45,20,.08),transparent 38%,rgba(83,52,21,.12) 100%),
-    repeating-linear-gradient(105deg,rgba(255,251,237,.019) 0 1px,transparent 1px 9px),
-    linear-gradient(111deg,#ad8b60 0%,#d0b28a 29%,#e7d4b5 54%,#c5a276 79%,#94744f 100%);
+    radial-gradient(ellipse 38% 35% at 95% 8%,rgba(236,177,34,.058),transparent 83%),
+    linear-gradient(180deg,#151617 0%,#1b1c1d 57%,#171819 100%);
 }
 .market-main .listings-section::after{
-  content:"";position:absolute;top:0;left:50%;
-  width:100vw;height:1px;transform:translateX(-50%);z-index:0;
-  background:linear-gradient(90deg,transparent,rgba(255,247,211,.80),transparent);
+  content:"";
+  position:absolute;left:50%;top:0;
+  width:100vw;height:1px;transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,rgba(236,177,34,.36),transparent);
+  pointer-events:none;
 }
 .market-main .listings-section>.section-head,
 .market-main .listings-section>.sample-notice,
 .market-main .listings-section>.error,
 .market-main .listings-section>.property-grid,
 .market-main .listings-section>.empty{position:relative;z-index:1}
-.market-main .listings-section .section-head h2{
-  color:#2f241a;text-shadow:0 1px 0 rgba(255,246,226,.38);
-}
-.market-main .listings-section .section-head .eyebrow{color:#775531}
+.market-main .listings-section .section-head h2{color:#f5f1e7}
+.market-main .listings-section .section-head .eyebrow{color:#ECB122}
 .market-main .listings-section .section-head>p,
-.market-main .listings-section .result-tools{color:#51412e}
+.market-main .listings-section .result-tools{color:#b6b1a6}
 .market-main .listings-section .result-tools select{
-  background:#312c26;border:1px solid #9e7e55;color:#f0e0c2;
+  color:#e7e1d6;background:#232425;
+  border-color:rgba(236,177,34,.23);
 }
 .market-main .listings-section .sample-notice{
-  background:rgba(52,43,34,.10);
-  color:#493823;border:1px solid rgba(92,62,30,.23);
+  color:#c6beb1;
+  background:#222324;
+  border:1px solid rgba(236,177,34,.15);
 }
 .market-main .listings-section .property{
-  background:linear-gradient(147deg,#302b25,#1e201f 65%,#252322);
-  border:1px solid rgba(106,78,42,.52);
-  box-shadow:0 14px 32px rgba(68,47,26,.23);
+  position:relative;isolation:isolate;
+  background:#222324;
+  border:1px solid rgba(236,177,34,.15);
+  border-radius:13px;
+  box-shadow:0 9px 23px rgba(0,0,0,.17);
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
 }
-.market-main .listings-section .property:hover{
-  border-color:#bf965d;
-  box-shadow:0 20px 42px rgba(63,42,19,.34);
+.market-main .listings-section .property::before{
+  content:"";
+  pointer-events:none;z-index:2;
+  position:absolute;top:0;right:22px;left:22px;height:2px;
+  background:linear-gradient(90deg,transparent,#ECB122,transparent);
+  opacity:0;transition:opacity .25s ease;
 }
-.market-main .listings-section .property-title{color:#f5eee2}
+.market-main .listings-section .property-title{color:#f3efe8}
 .market-main .listings-section .property-location,
-.market-main .listings-section .property-specs{color:#c6b8a5}
-.market-main .listings-section .property-bottom strong{color:#ebc68c}
-.market-main .listings-section .property-image{border-bottom:1px solid rgba(211,170,103,.32)}
+.market-main .listings-section .property-specs{color:#b6b0a5}
+.market-main .listings-section .property-bottom strong{color:#ECB122}
+.market-main .listings-section .property-image{border-bottom:1px solid rgba(236,177,34,.13)}
+.circle-link{background:#242321;color:#ECB122;border:1px solid rgba(236,177,34,.35)}
+.image-badges .demo-badge{background:#8c6b20;color:#fef3d9}
+.image-badges .real-badge{background:#29251b;color:#e2ba67}
+.favorite{color:#e9c16b;background:rgba(19,19,19,.91)}
+.favorite.is-saved{color:#ECB122}
 
-/* Estate-owner invitation: unmistakably metallic gold, with the end fading into charcoal. */
+/* The only dramatic gold treatment: a restrained, framed enquiry panel. */
 .market-main .owner-banner{
+  color:#eee9de;
   background:
-    linear-gradient(155deg,transparent 0 58%,rgba(255,247,219,.16) 58.2%,transparent 59%),
-    radial-gradient(ellipse 69% 100% at 35% -50%,rgba(255,246,214,.48),transparent 79%),
-    linear-gradient(to left,#e8d1aa 0%,#cfaa78 38%,#a07845 65%,#3b3025 84%,#232220 100%);
-  color:#281d12;
-  border:1px solid rgba(242,213,161,.78);
-  border-radius:17px;
-  box-shadow:0 16px 42px rgba(53,37,20,.26),inset 0 1px 0 rgba(255,245,218,.45);
+    linear-gradient(107deg,rgba(236,177,34,.54),rgba(236,177,34,.17) 23%,transparent 46%),
+    linear-gradient(110deg,#302b1d 0%,#1e2020 41%,#181a1a 100%);
+  border:1px solid rgba(236,177,34,.60);
+  border-radius:13px;
+  box-shadow:0 18px 45px rgba(0,0,0,.25),inset 0 1px 0 rgba(236,177,34,.07);
 }
-.market-main .owner-banner h2{color:#302111;font-weight:800}
-.market-main .owner-banner p{color:#523a25}
-.market-main .owner-banner .eyebrow{color:#805628}
+.market-main .owner-banner::before{
+  content:"";pointer-events:none;position:absolute;inset:11px;
+  border:1px solid rgba(236,177,34,.15);
+  border-radius:7px;
+}
+.market-main .owner-banner h2{color:#f2ece0;font-weight:700}
+.market-main .owner-banner p{color:#c9c0af}
+.market-main .owner-banner .eyebrow{color:#ECB122}
 .market-main .owner-banner .banner-icon{
-  color:#6b4c2a;border-color:rgba(112,78,36,.30);
-  background:rgba(255,239,207,.19);
+  color:#ECB122;background:rgba(236,177,34,.065);border-color:rgba(236,177,34,.37);
 }
-.market-main .owner-banner .light-button{
-  background:linear-gradient(112deg,#e9cf9e,#c99c61);
-  color:#2c2014;
-  border:1px solid rgba(255,246,209,.45);
-  box-shadow:0 9px 23px rgba(31,23,14,.25);
-}
-.market-main .owner-banner .light-button:hover{background:linear-gradient(112deg,#f4e0ba,#d9b27b)}
+.market-main .owner-banner .light-button{position:relative;z-index:1}
 .market-main .owner-banner .banner-orbit{
-  border-color:rgba(251,229,187,.41);
-  box-shadow:0 0 0 35px rgba(253,221,162,.06),0 0 0 75px rgba(255,224,164,.045);
+  border-color:rgba(236,177,34,.20);
+  box-shadow:0 0 0 36px rgba(236,177,34,.025),0 0 0 75px rgba(236,177,34,.018);
 }
 
-/* Services: dark heading region, then antique bronze and champagne tile progression. */
+/* Quiet editorial service cards with one subtle gold-emphasized center card. */
 .market-main .how{
   position:relative;isolation:isolate;
-  padding-top:94px;padding-bottom:100px;
+  padding-top:94px;padding-bottom:102px;
 }
 .market-main .how::before{
   content:"";position:absolute;left:50%;top:0;
   width:100vw;height:100%;transform:translateX(-50%);
   pointer-events:none;z-index:0;
   background:
-    radial-gradient(ellipse 60% 65% at 4% 93%,rgba(239,212,167,.47),transparent 78%),
-    linear-gradient(to left,#342d24 0%,#795b3a 42%,#c19b68 78%,#e5cfaa 100%);
+    radial-gradient(ellipse 43% 60% at 3% 100%,rgba(236,177,34,.066),transparent 79%),
+    linear-gradient(120deg,#181a1b,#101213 66%);
 }
-.market-main .how>.section-head,.market-main .how>.steps{position:relative;z-index:1}
-.market-main .how .section-head h2{color:#f5e9d4}
-.market-main .how .section-head .eyebrow{color:#e0bd82}
-.market-main .how .section-head>p{color:#ead8ba}
+.market-main .how>.section-head,
+.market-main .how>.steps{position:relative;z-index:1}
+.market-main .how .section-head h2{color:#f2efe7}
+.market-main .how .section-head .eyebrow{color:#ECB122}
+.market-main .how .section-head>p{color:#aaa59c}
 .market-main .how .steps{gap:22px}
-.market-main .how-card{min-height:239px;padding:27px;border-radius:15px;box-shadow:0 14px 30px rgba(57,39,20,.22)}
-.market-main .how-card:nth-child(1){
-  background:linear-gradient(146deg,#322b24,#1f201f 78%);
-  color:#f1e4d1;border:1px solid rgba(219,175,101,.54);
+.market-main .how-card{
+  min-height:228px;padding:28px;
+  border:1px solid rgba(236,177,34,.15);
+  border-radius:12px;
+  background:#202122;
+  box-shadow:0 6px 20px rgba(0,0,0,.12);
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
 }
 .market-main .how-card:nth-child(2){
-  background:
-    radial-gradient(ellipse 70% 45% at 80% 0%,rgba(255,236,195,.26),transparent 78%),
-    linear-gradient(128deg,#9f7847,#70502f 58%,#5b402b);
-  color:#f2e9da;border:1px solid rgba(241,205,145,.62);
+  background:linear-gradient(155deg,#2b281f,#1c1d1e 68%);
+  border-color:rgba(236,177,34,.38);
 }
-.market-main .how-card:nth-child(3){
-  background:
-    linear-gradient(145deg,rgba(255,245,218,.45),transparent 45%),
-    repeating-linear-gradient(105deg,rgba(255,249,229,.035) 0 1px,transparent 1px 7px),
-    linear-gradient(125deg,#eddab8,#c29a65 72%,#dcbf8d);
-  border:1px solid rgba(255,248,219,.64);
-  color:#302418;box-shadow:inset 0 1px 0 rgba(255,252,238,.66),0 14px 30px rgba(57,39,20,.20);
+.market-main .how-card h3{color:#f1eee8}
+.market-main .how-card p{color:#bcb6ab}
+.market-main .how-card>div>b{color:#c5a15a}
+.market-main .how-card:nth-child(2)>div>b{color:#ECB122}
+.market-main .how-card .icon-well{
+  background:rgba(236,177,34,.075);
+  border-color:rgba(236,177,34,.18);
+  color:#ECB122;
 }
-.market-main .how-card:nth-child(-n+2) h3{color:#f7e9d1}
-.market-main .how-card:nth-child(-n+2) p{color:#d9cab5}
-.market-main .how-card:nth-child(-n+2)>div>b{color:#ead0a5}
-.market-main .how-card:nth-child(3) h3{color:#281d14}
-.market-main .how-card:nth-child(3) p{color:#59412a}
-.market-main .how-card:nth-child(3)>div>b{color:#76522a}
-.market-main .how-card:nth-child(3) .icon-well{
-  color:#e8cfa2;background:#332b21;border-color:#6b5231;
-}
-.market-main .how-card:nth-child(2) .icon-well{color:#f0d5a9;background:rgba(255,232,182,.16);border-color:rgba(255,230,181,.36)}
 
-/* Footer is warm dark bronze, rather than flat black or a yellow surface. */
+/* Low-key footer: black stone, one gold rule and no wide gold gradients. */
 footer{
-  background:
-    radial-gradient(ellipse 65% 100% at 93% 0%,rgba(219,171,102,.25),transparent 78%),
-    linear-gradient(to left,#282520 0%,#423326 51%,#745638 100%);
-  border-top:1px solid rgba(226,187,121,.54);
+  background:linear-gradient(150deg,#101112,#18191a 48%,#101112);
+  border-top:2px solid rgba(236,177,34,.66);
 }
-footer .footer-main h4{color:#ebcd98}
-footer .footer-main p{color:#d3c2a9}
-footer .footer-main button{color:#e2cbaa}
-footer .footer-bottom{color:#d8c5a7;border-color:rgba(230,190,124,.34)}
+footer .footer-main h4{color:#e9bc5d}
+footer .footer-main p{color:#a9a59d}
+footer .footer-main button{color:#c9c3b8}
+footer .footer-consultants b{color:#ECB122}
+footer .footer-bottom{color:#9a968e;border-top-color:rgba(236,177,34,.17)}
+.mobile-bottom{
+  background:rgba(17,18,19,.97);
+  border-top:1px solid rgba(236,177,34,.29);
+  box-shadow:0 -4px 20px rgba(0,0,0,.20);
+}
+.mobile-bottom button{color:#bcb7ae}
+.mobile-bottom button:nth-child(3){color:#ECB122}
 
-/* Private pages retain the same language without converting form fields to gold. */
+/* Consistent inner pages: same charcoal surfaces, no new color system. */
 .app-main{
   background:
-    radial-gradient(ellipse 65% 34% at 92% 6%,rgba(232,193,129,.24),transparent 80%),
-    linear-gradient(122deg,#3e3429,#826443 55%,#554431);
+    radial-gradient(ellipse 65% 30% at 89% 1%,rgba(236,177,34,.065),transparent 80%),
+    linear-gradient(135deg,#171819,#101112);
 }
-.app-main .page-heading h1{color:#f2d9ac}
+.app-main .page-heading h1{color:#f2eee5}
 .app-main .login-box,.app-main .listing-form,.app-main .admin-card,.app-main .mine-card{
-  background:linear-gradient(135deg,#302b25,#1f211f);
-  border:1px solid rgba(221,182,118,.44);
-  box-shadow:0 15px 35px rgba(33,24,16,.25);
+  background:#1e1f20;
+  border:1px solid rgba(236,177,34,.23);
+  box-shadow:0 12px 33px rgba(0,0,0,.20);
+}
+.form-steps .current b,.form-steps .complete b{background:#ECB122;color:#111}
+.stats-grid .active,.amenity-options .active{
+  background:#2a261d;border-color:rgba(236,177,34,.57);
+}
+.detail-price b,.detail-stats b{color:#ECB122}
+.detail-modal{background:#1c1d1e;border:1px solid rgba(236,177,34,.36)}
+.upload-box{background:#252321;border-color:rgba(236,177,34,.43)}
+input,textarea,select{color:#eeeae0;background:#212223;border-color:rgba(236,177,34,.22)}
+input:focus,textarea:focus,select:focus{
+  border-color:#ECB122;
+  box-shadow:0 0 0 3px rgba(236,177,34,.13);
 }
 
+/* Interaction principle: subtle lift, gold detail, never an entire gold card. */
+@media(hover:hover) and (pointer:fine){
+  header nav button:hover{color:#ECB122}
+  .primary:not(:disabled):hover{
+    color:#111;background:#f7c24b;border-color:#f7c24b;
+    transform:translateY(-2px);
+    box-shadow:0 9px 23px rgba(236,177,34,.18);
+  }
+  .outline:not(:disabled):hover{
+    background:rgba(236,177,34,.09);
+    color:#f2ce7d;border-color:rgba(236,177,34,.74);
+  }
+  .light-button:not(:disabled):hover{
+    color:#111;background:#f7c24b;
+    transform:translateY(-2px);
+    box-shadow:0 8px 19px rgba(236,177,34,.14);
+  }
+  .text-button:hover{color:#f7c24b}
+  .discovery-stage .categories>button:hover{
+    transform:translateY(-2px);
+    color:#f4e7c8;
+    background:#272725;
+    border-color:rgba(236,177,34,.63);
+    box-shadow:0 11px 22px rgba(0,0,0,.22);
+  }
+  .discovery-stage .categories>button:hover>svg:last-child{color:#ECB122}
+  .market-main .listings-section .property:hover{
+    transform:translateY(-4px);
+    border-color:rgba(236,177,34,.55);
+    box-shadow:0 19px 35px rgba(0,0,0,.29);
+  }
+  .market-main .listings-section .property:hover::before{opacity:1}
+  .market-main .listings-section .property:hover .circle-link{
+    background:#ECB122;color:#121212;border-color:#ECB122;
+  }
+  .market-main .how-card:hover{
+    transform:translateY(-3px);
+    border-color:rgba(236,177,34,.50);
+    box-shadow:0 13px 30px rgba(0,0,0,.20);
+  }
+  .search-tabs button:hover{color:#ECB122}
+  .hero-arrow-buttons button:hover{background:rgba(236,177,34,.13);color:#f7c24b}
+  .footer-main a:hover,.footer-main button:hover,.footer-consultants a:hover{color:#ECB122}
+  .mobile-bottom button:hover,.icon-button:hover{color:#ECB122}
+}
+:is(a,button,input,select,textarea,[tabindex]):focus-visible{
+  outline:2px solid #ECB122;outline-offset:3px;
+}
 @media(max-width:1100px){
-  .market-main .how .steps{gap:16px}
-  .market-main .how-card{padding:22px}
+  .market-main .how .steps{gap:17px}
+  .market-main .how-card{padding:23px}
 }
 @media(max-width:800px){
-  .discovery-stage{padding:29px 0 22px}
-  .discovery-stage .categories{padding-top:23px}
+  .discovery-stage{padding:27px 0 21px}
+  .discovery-stage .categories{padding-top:22px}
   .discovery-stage .categories>button{min-height:65px}
-  .market-main .listings-section{padding-top:55px;padding-bottom:60px}
-  .market-main .how{padding-top:67px;padding-bottom:74px}
-  .market-main .how-card{min-height:215px;padding:20px}
+  .market-main .listings-section{padding-top:56px;padding-bottom:68px}
+  .market-main .how{padding-top:67px;padding-bottom:73px}
+  .market-main .how-card{min-height:209px;padding:21px}
+  nav.mobile-open{background:#18191a;border-bottom-color:rgba(236,177,34,.30)}
 }
 @media(max-width:600px){
   .discovery-stage{
-    padding:22px 0 18px;
+    padding:23px 0 16px;
     background:
-      linear-gradient(112deg,rgba(255,248,220,.23),transparent 66%),
-      repeating-linear-gradient(100deg,rgba(255,246,215,.020) 0 1px,transparent 1px 9px),
-      linear-gradient(117deg,#9c7548 0%,#dbc096 39%,#e8d6b9 58%,#9f794c 100%);
+      radial-gradient(ellipse 80% 40% at 0% 60%,rgba(236,177,34,.105),transparent 78%),
+      linear-gradient(120deg,#202021,#131415 77%);
   }
-  .discovery-stage::after{width:95vw;left:-51vw;opacity:.38}
-  .discovery-stage .search-panel{border-radius:13px}
-  .discovery-stage .categories>button{min-height:60px}
-  .market-main .listings-section{padding-top:46px;padding-bottom:48px}
+  .discovery-stage::after{right:8px}
+  .discovery-stage .search-panel{border-radius:12px}
+  .discovery-stage .categories>button{min-height:59px}
+  .market-main .listings-section{padding-top:46px;padding-bottom:53px}
   .market-main .listings-section::before{
-    background:
-      radial-gradient(ellipse 85% 25% at 95% 0%,rgba(255,248,223,.52),transparent 75%),
-      linear-gradient(112deg,#af8b5f,#e4cfac 57%,#b9986d 100%);
+    background:linear-gradient(180deg,#171819,#1e1f20 65%,#171819);
   }
   .market-main .owner-banner{
     padding:28px 23px;
     background:
-      radial-gradient(ellipse 85% 70% at 83% -25%,rgba(255,252,225,.49),transparent 76%),
-      linear-gradient(to left,#e8d3b1 0%,#cba674 70%,#7d5c3a 100%);
+      linear-gradient(0deg,rgba(236,177,34,.16),transparent 55%),
+      linear-gradient(135deg,#29261d,#191b1c 70%);
   }
-  .market-main .owner-banner h2{color:#312215}
-  .market-main .owner-banner .eyebrow{color:#77502a}
-  .market-main .owner-banner p{color:#4b3521}
-  .market-main .how{padding-top:52px;padding-bottom:57px}
-  .market-main .how::before{
-    background:linear-gradient(147deg,#3a3026 0%,#805f3b 45%,#d0ad7c 100%);
-  }
-  .market-main .how .steps{gap:16px}
+  .market-main .owner-banner h2{color:#f2ece0}
+  .market-main .owner-banner p{color:#c9c0af;max-width:unset}
+  .market-main .how{padding-top:53px;padding-bottom:57px}
+  .market-main .how .steps{gap:15px}
   .market-main .how-card{min-height:0;padding:20px 19px 20px 75px}
   .market-main .how-card .icon-well{right:17px;top:18px}
   .market-main .how-card>div>b{left:20px;top:15px}
-  footer{background:linear-gradient(110deg,#423326,#755637 65%,#332a23)}
 }
 @media(prefers-reduced-motion:reduce){
-  .market-main .property{transition:none}
+  .primary,.outline,.light-button,.text-button,
+  .categories>button,.market-main .property,.market-main .how-card{
+    transition:none!important;
+  }
+  .primary:hover,.outline:hover,.light-button:hover,
+  .categories>button:hover,.market-main .property:hover,.market-main .how-card:hover{
+    transform:none!important;
+  }
 }

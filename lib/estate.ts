@@ -1,4 +1,4 @@
-import { env } from 'cloudflare:workers';
+import { env } from 'estate-platform';
 import { getChatGPTUser } from '../app/chatgpt-auth';
 export function db(){if(!env.DB)throw new Error('Database unavailable');return env.DB;}
 export async function identity(){const user=await getChatGPTUser(); if(!user)return {user:null,admin:false};const row=await db().prepare('SELECT value FROM settings WHERE key = ?').bind('admin_user').first<{value:string}>();return {user,admin:row?.value===user.userId};}

@@ -267,9 +267,9 @@ html,body{overflow-x:clip}
 body{
   color:#eee9df;
   background:
-    radial-gradient(ellipse 72% 19% at 95% 14%,rgba(190,148,78,.28),transparent 78%),
-    radial-gradient(ellipse 58% 22% at 3% 78%,rgba(177,129,59,.20),transparent 78%),
-    linear-gradient(115deg,#141516 0%,#24201b 42%,#111314 80%,#262017 100%);
+    radial-gradient(ellipse 72% 26% at 90% 11%,rgba(239,207,146,.23),transparent 75%),
+    radial-gradient(ellipse 63% 32% at 4% 72%,rgba(203,151,73,.23),transparent 78%),
+    linear-gradient(118deg,#2b251f 0%,#614728 33%,#392b20 62%,#805c32 100%);
 }
 .topbar{
   background:linear-gradient(102deg,#1b1916 0%,#4c3824 34%,#826337 51%,#42311e 74%,#18191a 100%);
@@ -301,8 +301,9 @@ header nav button:hover,header nav .nav-active{color:#e5c48b}
 .market-main{
   overflow-x:clip;
   background:
-    radial-gradient(ellipse 85% 22% at 91% 81%,rgba(151,108,44,.16),transparent 78%),
-    #131516;
+    radial-gradient(ellipse 62% 19% at 87% 77%,rgba(246,216,157,.27),transparent 78%),
+    radial-gradient(ellipse 57% 21% at 6% 41%,rgba(208,156,76,.24),transparent 80%),
+    linear-gradient(110deg,#36291d 0%,#77552d 25%,#b1864c 48%,#664826 70%,#473522 100%);
 }
 .hero-slider{
   border-bottom:2px solid #b48b50;
@@ -316,7 +317,7 @@ header nav button:hover,header nav .nav-active{color:#e5c48b}
   background:
     linear-gradient(103deg,transparent 0%,rgba(255,245,210,.11) 27%,rgba(255,243,203,.34) 36%,transparent 47%,rgba(31,25,20,.24) 74%,transparent 100%),
     radial-gradient(ellipse 42% 86% at 77% -3%,rgba(255,233,180,.59),transparent 76%),
-    linear-gradient(111deg,#17191a 0%,#43301d 16%,#996f37 28%,#d0ac70 39%,#e7cfa0 49%,#b88c4f 59%,#684a29 76%,#1a1b1b 100%);
+    linear-gradient(111deg,#35291d 0%,#72512b 16%,#a57a40 28%,#d0ac70 39%,#ebd5a9 49%,#bc9355 59%,#87612f 76%,#503922 100%);
   box-shadow:inset 0 1px 0 rgba(255,242,209,.18),inset 0 -15px 24px rgba(17,18,18,.27);
 }
 .discovery-stage::before{
@@ -412,9 +413,9 @@ header nav button:hover,header nav .nav-active{color:#e5c48b}
   z-index:-1;
   pointer-events:none;
   background:
-    linear-gradient(180deg,rgba(19,21,22,0) 0%,rgba(19,21,22,.20) 31%,#151718 79%),
-    radial-gradient(ellipse 48% 43% at 88% 8%,rgba(251,230,182,.41),transparent 83%),
-    linear-gradient(108deg,#151719 0%,#392d21 27%,#806039 51%,#c29b60 78%,#e3c68f 100%);
+    linear-gradient(180deg,rgba(42,31,19,.02) 0%,rgba(67,42,22,.09) 43%,rgba(53,39,26,.43) 100%),
+    radial-gradient(ellipse 57% 52% at 86% 13%,rgba(255,234,192,.53),transparent 80%),
+    linear-gradient(108deg,#594029 0%,#8c6737 27%,#b58a50 51%,#d6ac6d 78%,#ead0a0 100%);
 }
 .market-main .listings-section::after{
   content:"";
@@ -430,8 +431,8 @@ header nav button:hover,header nav .nav-active{color:#e5c48b}
   text-shadow:0 1px 0 rgba(255,234,191,.35);
 }
 .market-main .listings-section .section-head .eyebrow{color:#59401e}
-.market-main .listings-section .section-head>p{color:#e1cba9}
-.market-main .listings-section .result-tools{color:#e8dbc7}
+.market-main .listings-section .section-head>p{color:#3a2c1c}
+.market-main .listings-section .result-tools{color:#3c2f20}
 .market-main .listings-section .sample-notice{
   background:rgba(19,20,20,.70);
   color:#e4d7bf;
@@ -503,8 +504,8 @@ header nav button:hover,header nav .nav-active{color:#e5c48b}
   z-index:-1;
   pointer-events:none;
   background:
-    radial-gradient(ellipse 51% 48% at 5% 93%,rgba(242,206,143,.34),transparent 76%),
-    linear-gradient(105deg,#9b743f 0%,#584027 23%,#23201b 48%,#151718 82%);
+    radial-gradient(ellipse 57% 56% at 8% 89%,rgba(255,234,189,.55),transparent 77%),
+    linear-gradient(105deg,#dcba80 0%,#b28951 23%,#785730 48%,#493721 79%,#29231d 100%);
 }
 .market-main .how .section-head h2{color:#f6edde}
 .market-main .how .section-head .eyebrow{color:#d8b57b}
@@ -554,8 +555,8 @@ header nav button:hover,header nav .nav-active{color:#e5c48b}
 }
 footer{
   background:
-    radial-gradient(ellipse 66% 83% at 96% -30%,rgba(181,137,67,.24),transparent 77%),
-    linear-gradient(108deg,#18191a,#30261c 27%,#111315 71%,#181818);
+    radial-gradient(ellipse 63% 80% at 87% -25%,rgba(250,210,146,.36),transparent 77%),
+    linear-gradient(108deg,#2e271e 0%,#72532f 28%,#3e3123 64%,#886439 100%);
   border-top:1px solid rgba(223,181,105,.45);
 }
 footer .footer-main h4{color:#e1bb7c}
@@ -604,8 +605,8 @@ footer .footer-bottom{border-color:rgba(198,162,94,.31)}
   .market-main .listings-section{padding-top:43px;padding-bottom:45px}
   .market-main .listings-section::before{
     background:
-      linear-gradient(180deg,rgba(19,21,22,0) 0%,rgba(19,21,22,.22) 30%,#151718 78%),
-      linear-gradient(109deg,#382d23 0%,#94703d 46%,#e2c48e 100%);
+      linear-gradient(180deg,rgba(56,39,24,.01) 0%,rgba(60,43,27,.10) 45%,rgba(58,41,27,.41) 100%),
+      linear-gradient(109deg,#77542f 0%,#b38850 46%,#ead09d 100%);
   }
   .market-main .owner-banner{
     padding:28px 23px;
@@ -618,7 +619,7 @@ footer .footer-bottom{border-color:rgba(198,162,94,.31)}
   .market-main .owner-banner h2{color:#241b13}
   .market-main .how{padding-top:52px;padding-bottom:56px}
   .market-main .how::before{
-    background:linear-gradient(160deg,#121415 0%,#32271d 40%,#8e6b3a 85%,#b58a4f 100%);
+    background:linear-gradient(160deg,#584027 0%,#a57a43 39%,#dab57a 85%,#79572f 100%);
   }
   .market-main .how .steps{gap:15px}
   .market-main .how-card{min-height:0;padding:20px 19px 20px 75px}

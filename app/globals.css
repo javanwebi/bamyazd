@@ -243,58 +243,388 @@ input:focus,textarea:focus,select:focus{
   .search-panel{box-shadow:0 10px 28px rgba(0,0,0,.20)}
 }
 
-/* Logo-inspired architectural engraving, November 2026.
-   Original black base + subtle metallic gold arcs and roofline; no yellow fill.
-   Background graphics live on body itself, so menus, modals and click targets
-   retain their existing stacking contexts and pointer behavior. */
+
+/* BAM YAZD / GILDED ARCHITECTURE
+   Alternating dark stone, brushed antique gold and pale champagne highlights.
+   A section-based composition, not a uniform golden background or a faint
+   pattern painted over black. This overrides the previous ornamental overlay.
+   Hero imagery, RTL layout, responsive widths and API behaviour are preserved. */
+:root{
+  --gold:#c09a5b;
+  --green:#c5a16a;
+  --sage:#d6b77e;
+  --deep:#141516;
+  --cream:#24211c;
+  --line:#6f5838;
+  --ink:#f3eee3;
+  --muted:#beb6a8;
+  --bam-gold-1:#9b7137;
+  --bam-gold-2:#d2ad73;
+  --bam-gold-3:#ebd3a2;
+  --bam-noir:#151718;
+}
+html,body{overflow-x:clip}
 body{
-  background-color:#111315;
-  background-image:
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20950%20710%22%20fill%3D%22none%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22a%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22950%22%20y2%3D%22680%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%2349331b%22%2F%3E%3Cstop%20offset%3D%22.46%22%20stop-color%3D%22%23c99f4e%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%236c4a23%22%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23c99f4e%22%20stop-opacity%3D%22.17%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c99f4e%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Cellipse%20cx%3D%22670%22%20cy%3D%22250%22%20rx%3D%22320%22%20ry%3D%22265%22%20fill%3D%22url(%23b)%22%2F%3E%3Cg%20stroke%3D%22url(%23a)%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M951%2076C706%2033%20491%2093%20371%20243S196%20496%2039%20515%22%20stroke-width%3D%221.65%22%20opacity%3D%22.52%22%2F%3E%3Cpath%20d%3D%22M970%20123C728%2076%20550%20113%20443%20256S240%20538%2092%20562%22%20stroke-width%3D%22.85%22%20opacity%3D%22.34%22%2F%3E%3Cpath%20d%3D%22M946%20172C720%20115%20568%20146%20488%20266S293%20545%20172%20578%22%20stroke-width%3D%22.65%22%20opacity%3D%22.25%22%2F%3E%3Cpath%20d%3D%22M305%20402L561%20181%20889%20403%22%20stroke-width%3D%221.4%22%20opacity%3D%22.43%22%2F%3E%3Cpath%20d%3D%22M369%20421L569%20247%20805%20426%22%20stroke-width%3D%22.8%22%20opacity%3D%22.29%22%2F%3E%3Cpath%20d%3D%22M640%20283l34%200%200%2034%20-34%200zM686%20283l34%200%200%2034%20-34%200zM640%20329l34%200%200%2034%20-34%200zM686%20329l34%200%200%2034%20-34%200z%22%20stroke-width%3D%22.8%22%20opacity%3D%22.27%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20950%20710%22%20fill%3D%22none%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22a%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22950%22%20y2%3D%22680%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%3Cstop%20stop-color%3D%22%2349331b%22%2F%3E%3Cstop%20offset%3D%22.46%22%20stop-color%3D%22%23c99f4e%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%236c4a23%22%2F%3E%3C%2FlinearGradient%3E%3CradialGradient%20id%3D%22b%22%3E%3Cstop%20stop-color%3D%22%23c99f4e%22%20stop-opacity%3D%22.17%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c99f4e%22%20stop-opacity%3D%220%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Cellipse%20cx%3D%22670%22%20cy%3D%22250%22%20rx%3D%22320%22%20ry%3D%22265%22%20fill%3D%22url(%23b)%22%2F%3E%3Cg%20stroke%3D%22url(%23a)%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M951%2076C706%2033%20491%2093%20371%20243S196%20496%2039%20515%22%20stroke-width%3D%221.65%22%20opacity%3D%22.52%22%2F%3E%3Cpath%20d%3D%22M970%20123C728%2076%20550%20113%20443%20256S240%20538%2092%20562%22%20stroke-width%3D%22.85%22%20opacity%3D%22.34%22%2F%3E%3Cpath%20d%3D%22M946%20172C720%20115%20568%20146%20488%20266S293%20545%20172%20578%22%20stroke-width%3D%22.65%22%20opacity%3D%22.25%22%2F%3E%3Cpath%20d%3D%22M305%20402L561%20181%20889%20403%22%20stroke-width%3D%221.4%22%20opacity%3D%22.43%22%2F%3E%3Cpath%20d%3D%22M369%20421L569%20247%20805%20426%22%20stroke-width%3D%22.8%22%20opacity%3D%22.29%22%2F%3E%3Cpath%20d%3D%22M640%20283l34%200%200%2034%20-34%200zM686%20283l34%200%200%2034%20-34%200zM640%20329l34%200%200%2034%20-34%200zM686%20329l34%200%200%2034%20-34%200z%22%20stroke-width%3D%22.8%22%20opacity%3D%22.27%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
-    radial-gradient(ellipse 56% 16% at 82% 12%,rgba(191,147,68,.105),transparent 80%),
-    radial-gradient(ellipse 42% 15% at 11% 57%,rgba(178,129,56,.075),transparent 78%),
-    radial-gradient(ellipse 50% 15% at 88% 91%,rgba(197,154,75,.065),transparent 78%),
-    linear-gradient(125deg,#17191a 0%,#101213 48%,#161718 100%);
-  background-repeat:no-repeat;
-  background-size:
-    min(78vw,920px) auto,
-    min(66vw,760px) auto,
-    100% 100%,
-    100% 100%,
-    100% 100%,
-    100% 100%;
-  background-position:
-    right 12% top 350px,
-    left -18% top 1670px,
-    center,
-    center,
-    center,
-    center;
-}
-/* Subtle golden detailing is reserved for the most important black surfaces. */
-.search-panel{
+  color:#eee9df;
   background:
-    linear-gradient(115deg,rgba(184,142,70,.065),transparent 36%),
-    linear-gradient(145deg,#202122 0%,#181a1b 72%,#1d1e1f 100%);
-  border-color:rgba(190,150,81,.26);
+    radial-gradient(ellipse 72% 19% at 95% 14%,rgba(190,148,78,.28),transparent 78%),
+    radial-gradient(ellipse 58% 22% at 3% 78%,rgba(177,129,59,.20),transparent 78%),
+    linear-gradient(115deg,#141516 0%,#24201b 42%,#111314 80%,#262017 100%);
 }
-.owner-banner{
+.topbar{
+  background:linear-gradient(102deg,#1b1916 0%,#4c3824 34%,#826337 51%,#42311e 74%,#18191a 100%);
+  border-bottom:1px solid rgba(237,198,119,.32);
+  color:#f1e6d3;
+}
+.topbar .rotating-contact>span:not(.contact-switch){color:#eee2ce}
+.topbar .rotating-contact>b{color:#f1d49b}
+header{
+  background:linear-gradient(108deg,#141516 0%,#1b1b1a 51%,#262016 82%,#171819 100%);
+  border-bottom:1px solid rgba(210,171,100,.43);
+  box-shadow:0 9px 30px rgba(0,0,0,.32);
+}
+header .brand b{color:#d0aa67}
+header nav button:hover,header nav .nav-active{color:#e5c48b}
+.primary{
+  background:linear-gradient(112deg,#9a7038 0%,#c49a57 31%,#e2c389 49%,#b78a49 77%,#9d713a 100%);
+  border:1px solid rgba(250,215,150,.29);
+  color:#171613;
+  box-shadow:inset 0 1px 0 rgba(255,243,215,.35),0 7px 18px rgba(0,0,0,.20);
+}
+.primary:hover{
+  background:linear-gradient(112deg,#ad8146,#d5ad6c 48%,#bc8f4f);
+  color:#171613;
+}
+.outline{background:#202021;border-color:rgba(210,171,100,.40);color:#e8d6b5}
+
+/* CHAPTER 1: polished gold entrance below the original image-first hero. */
+.market-main{
+  overflow-x:clip;
   background:
-    radial-gradient(ellipse 52% 92% at 0% 60%,rgba(195,150,75,.12),transparent 79%),
-    linear-gradient(113deg,#242321,#191b1d 62%,#202020 100%);
+    radial-gradient(ellipse 85% 22% at 91% 81%,rgba(151,108,44,.16),transparent 78%),
+    #131516;
+}
+.hero-slider{
+  border-bottom:2px solid #b48b50;
+  box-shadow:0 15px 32px rgba(0,0,0,.27);
+}
+.discovery-stage{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:38px 0 25px;
+  background:
+    linear-gradient(103deg,transparent 0%,rgba(255,245,210,.11) 27%,rgba(255,243,203,.34) 36%,transparent 47%,rgba(31,25,20,.24) 74%,transparent 100%),
+    radial-gradient(ellipse 42% 86% at 77% -3%,rgba(255,233,180,.59),transparent 76%),
+    linear-gradient(111deg,#17191a 0%,#43301d 16%,#996f37 28%,#d0ac70 39%,#e7cfa0 49%,#b88c4f 59%,#684a29 76%,#1a1b1b 100%);
+  box-shadow:inset 0 1px 0 rgba(255,242,209,.18),inset 0 -15px 24px rgba(17,18,18,.27);
+}
+.discovery-stage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(155deg,transparent 46%,rgba(13,16,17,.38) 47%,rgba(21,23,24,.58) 58%,transparent 59%),
+    repeating-linear-gradient(120deg,transparent 0 54px,rgba(255,245,216,.058) 55px,transparent 56px);
+  opacity:.62;
+  z-index:0;
+}
+.discovery-stage::after{
+  content:"";
+  position:absolute;
+  width:48vw;
+  max-width:760px;
+  height:135%;
+  left:-15vw;
+  top:-26%;
+  transform:rotate(-18deg);
+  pointer-events:none;
+  border:1px solid rgba(255,233,184,.33);
+  border-radius:48%;
+  box-shadow:0 0 0 24px rgba(246,212,149,.04),0 0 0 76px rgba(45,32,20,.09);
+  z-index:0;
+}
+.discovery-stage>.search-panel,.discovery-stage>.categories{position:relative;z-index:1}
+.discovery-stage>.search-panel{
+  margin-top:0;
+  background:
+    radial-gradient(ellipse 65% 120% at 94% -42%,rgba(190,149,78,.19),transparent 78%),
+    linear-gradient(145deg,#292724 0%,#191b1c 53%,#22201d 100%);
+  border:1px solid rgba(241,202,135,.56);
+  border-radius:15px;
+  box-shadow:0 17px 43px rgba(16,16,16,.40),inset 0 1px 0 rgba(255,255,255,.07);
+}
+.discovery-stage>.search-panel::before{
+  content:"";
+  position:absolute;
+  height:2px;
+  top:-1px;left:17%;right:17%;
+  background:linear-gradient(90deg,transparent,#f1d69d 48%,transparent);
+  pointer-events:none;
+}
+.discovery-stage .search-tabs .selected{color:#eccb92}
+.discovery-stage .search-tabs .selected:after{background:#d8b375}
+.discovery-stage .categories{
+  padding-top:28px;
+  padding-bottom:10px;
+  gap:14px;
+}
+.discovery-stage .categories>button{
+  min-height:75px;
+  background:linear-gradient(150deg,#262626 0%,#181a1c 100%);
+  border:1px solid rgba(244,211,155,.32);
+  color:#eee6d8;
+  box-shadow:0 9px 21px rgba(21,20,18,.21);
+}
+.discovery-stage .categories>button:hover,
+.discovery-stage .categories .category-active{
+  background:linear-gradient(150deg,#372c20,#1f2021);
+  border-color:#e3c18a;
+  box-shadow:0 9px 22px rgba(22,17,13,.25);
+}
+.discovery-stage .categories>button>svg:first-child{color:#dec087}
+.discovery-stage .categories>button:nth-child(2){
+  background:linear-gradient(133deg,#b0874d 0%,#e3c996 47%,#a77b43 100%);
+  color:#231a12;
+  border-color:rgba(255,241,202,.62);
+  box-shadow:inset 0 1px 0 rgba(255,252,222,.54),0 10px 23px rgba(24,20,14,.19);
+}
+.discovery-stage .categories>button:nth-child(2)>svg{color:#342718}
+.discovery-stage .categories>button:nth-child(2):hover,
+.discovery-stage .categories>button:nth-child(2).category-active{
+  background:linear-gradient(133deg,#bd9455,#f0d6a2 47%,#bc9254);
+}
+
+/* CHAPTER 2: sunlit gold on one side, falling into graphite behind dark cards. */
+.market-main .listings-section{
+  position:relative;
+  isolation:isolate;
+  padding-top:67px;
+  padding-bottom:83px;
+}
+.market-main .listings-section::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 50%;
+  width:100vw;
+  transform:translateX(-50%);
+  z-index:-1;
+  pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(19,21,22,0) 0%,rgba(19,21,22,.20) 31%,#151718 79%),
+    radial-gradient(ellipse 48% 43% at 88% 8%,rgba(251,230,182,.41),transparent 83%),
+    linear-gradient(108deg,#151719 0%,#392d21 27%,#806039 51%,#c29b60 78%,#e3c68f 100%);
+}
+.market-main .listings-section::after{
+  content:"";
+  position:absolute;
+  left:50%;top:0;
+  width:100vw;height:1px;
+  transform:translateX(-50%);
+  pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(250,214,149,.45),transparent);
+}
+.market-main .listings-section .section-head h2{
+  color:#271d12;
+  text-shadow:0 1px 0 rgba(255,234,191,.35);
+}
+.market-main .listings-section .section-head .eyebrow{color:#59401e}
+.market-main .listings-section .section-head>p{color:#e1cba9}
+.market-main .listings-section .result-tools{color:#e8dbc7}
+.market-main .listings-section .sample-notice{
+  background:rgba(19,20,20,.70);
+  color:#e4d7bf;
+  border-color:rgba(231,187,115,.38);
+}
+.market-main .listings-section .property{
+  background:linear-gradient(159deg,#252321,#17191b 82%);
+  border:1px solid rgba(216,174,101,.35);
+  box-shadow:0 13px 35px rgba(0,0,0,.29);
+}
+.market-main .listings-section .property:hover{
+  border-color:#d4ac6a;
+  box-shadow:0 19px 43px rgba(0,0,0,.40),0 0 0 1px rgba(230,193,122,.12);
+}
+.market-main .listings-section .property-bottom strong{color:#e0b97b}
+.market-main .listings-section .property-image{border-bottom:1px solid rgba(231,186,113,.21)}
+
+/* CHAPTER 3: bold gold statement panel with contrasting noir left edge. */
+.market-main .owner-banner{
+  background:
+    radial-gradient(ellipse 47% 140% at 87% -30%,rgba(255,245,213,.80),transparent 72%),
+    linear-gradient(108deg,#111416 0%,#1b1b1a 23%,#51391f 42%,#aa7e41 60%,#e4c58b 83%,#b99356 100%);
+  border:1px solid rgba(251,228,171,.68);
+  color:#231c14;
+  border-radius:16px;
+  box-shadow:0 20px 54px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,248,211,.45);
+}
+.market-main .owner-banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  border-radius:inherit;
+  background:
+    linear-gradient(138deg,transparent 0 58%,rgba(254,240,202,.21) 58.2%,transparent 58.6%),
+    linear-gradient(138deg,transparent 0 70%,rgba(56,38,18,.22) 70.2%,transparent 70.6%);
+}
+.market-main .owner-banner .eyebrow{color:#5e421f}
+.market-main .owner-banner h2{color:#251d14;font-weight:800}
+.market-main .owner-banner p{color:#513c25}
+.market-main .banner-icon{border-color:rgba(72,50,22,.43);color:#5d401f;background:rgba(244,221,165,.17)}
+.market-main .banner-orbit{
+  border-color:rgba(255,244,201,.42);
+  box-shadow:0 0 0 35px rgba(251,221,159,.095),0 0 0 75px rgba(249,210,145,.045);
+}
+.market-main .owner-banner .light-button{
+  position:relative;
+  z-index:1;
+  background:linear-gradient(120deg,#ebd19a,#c99d5d);
+  color:#201a14;
+  border:1px solid rgba(255,235,183,.36);
+  box-shadow:0 7px 19px rgba(0,0,0,.25);
+}
+.market-main .owner-banner .light-button:hover{background:linear-gradient(120deg,#f4dfb4,#d7b172)}
+
+/* CHAPTER 4: dark/bronze/champagne services, each tile deliberately different. */
+.market-main .how{
+  position:relative;
+  isolation:isolate;
+  padding-top:89px;
+  padding-bottom:95px;
+}
+.market-main .how::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 50%;
+  width:100vw;
+  transform:translateX(-50%);
+  z-index:-1;
+  pointer-events:none;
+  background:
+    radial-gradient(ellipse 51% 48% at 5% 93%,rgba(242,206,143,.34),transparent 76%),
+    linear-gradient(105deg,#9b743f 0%,#584027 23%,#23201b 48%,#151718 82%);
+}
+.market-main .how .section-head h2{color:#f6edde}
+.market-main .how .section-head .eyebrow{color:#d8b57b}
+.market-main .how .section-head>p{color:#d5c1a3}
+.market-main .how .steps{gap:23px}
+.market-main .how-card{
+  min-height:238px;
+  padding:27px;
+  border-radius:15px;
+  box-shadow:0 14px 38px rgba(0,0,0,.20);
+}
+.market-main .how-card:nth-child(1){
+  color:#f3e5d0;
+  background:linear-gradient(145deg,#302c26,#17191b 76%);
+  border:1px solid rgba(207,168,101,.41);
+}
+.market-main .how-card:nth-child(2){
+  color:#f5e9d7;
+  background:
+    radial-gradient(ellipse 95% 35% at 70% -20%,rgba(248,209,142,.18),transparent 80%),
+    linear-gradient(135deg,#886235,#52371e 55%,#3c2c20);
+  border:1px solid rgba(240,196,119,.62);
+}
+.market-main .how-card:nth-child(3){
+  color:#251e17;
+  background:
+    linear-gradient(143deg,rgba(255,245,221,.56),transparent 46%),
+    linear-gradient(128deg,#e4c68d,#bd965b 63%,#d6b27a);
+  border:1px solid rgba(255,245,211,.52);
+  box-shadow:inset 0 1px 0 rgba(255,252,229,.60),0 14px 38px rgba(0,0,0,.23);
+}
+.market-main .how-card:nth-child(-n+2) h3{color:#f4e8d4}
+.market-main .how-card:nth-child(-n+2) p{color:#d3c5b1}
+.market-main .how-card:nth-child(-n+2)>div>b{color:#dec18d}
+.market-main .how-card:nth-child(3) h3{color:#211a15}
+.market-main .how-card:nth-child(3) p{color:#4b3928}
+.market-main .how-card:nth-child(3)>div>b{color:#5d4528}
+.market-main .how-card:nth-child(3) .icon-well{
+  background:#2a261f;
+  border-color:rgba(70,49,26,.28);
+  color:#ebd09c;
+}
+.market-main .how-card:nth-child(2) .icon-well{
+  background:rgba(245,203,136,.19);
+  border-color:rgba(255,231,181,.27);
+  color:#f2d5a2;
 }
 footer{
   background:
-    radial-gradient(ellipse 65% 80% at 88% 5%,rgba(187,142,67,.09),transparent 76%),
-    linear-gradient(110deg,#18191a,#111314 65%,#1a1a19);
+    radial-gradient(ellipse 66% 83% at 96% -30%,rgba(181,137,67,.24),transparent 77%),
+    linear-gradient(108deg,#18191a,#30261c 27%,#111315 71%,#181818);
+  border-top:1px solid rgba(223,181,105,.45);
+}
+footer .footer-main h4{color:#e1bb7c}
+footer .footer-main p{color:#bcb2a5}
+footer .footer-bottom{border-color:rgba(198,162,94,.31)}
+
+/* Keep secondary screens calmer, but tie them into the layered gold identity. */
+.app-main{
+  background:
+    radial-gradient(ellipse 70% 22% at 90% 5%,rgba(199,153,75,.18),transparent 78%),
+    transparent;
+}
+.app-main .page-heading h1{color:#e1c38f}
+.app-main .login-box,.app-main .listing-form,.app-main .admin-card,.app-main .mine-card{
+  border-color:rgba(213,172,104,.38);
+  box-shadow:0 15px 35px rgba(0,0,0,.17);
+}
+@media(max-width:1100px){
+  .market-main .how .steps{gap:16px}
+  .market-main .how-card{padding:22px}
 }
 @media(max-width:800px){
-  body{
-    background-size: 110vw auto,100vw auto,100% 100%,100% 100%,100% 100%,100% 100%;
-    background-position: right -22vw top 510px,left -37vw top 1840px,center,center,center,center;
+  .discovery-stage{padding:25px 0 19px}
+  .discovery-stage .categories{padding-top:22px}
+  .discovery-stage .categories>button{min-height:64px}
+  .market-main .listings-section{padding-top:52px;padding-bottom:59px}
+  .market-main .owner-banner{
+    background:
+      radial-gradient(ellipse 80% 78% at 80% 0%,rgba(255,238,201,.58),transparent 78%),
+      linear-gradient(115deg,#2d2820 0%,#805b31 38%,#d9b77b 79%,#b68e50);
   }
+  .market-main .how{padding-top:63px;padding-bottom:70px}
+  .market-main .how-card{min-height:215px;padding:20px}
+}
+@media(max-width:600px){
+  .discovery-stage{
+    padding:20px 0 17px;
+    background:
+      linear-gradient(101deg,rgba(255,242,209,.21),transparent 50%),
+      radial-gradient(ellipse 80% 45% at 81% 2%,rgba(252,228,179,.48),transparent 77%),
+      linear-gradient(116deg,#25221e 0%,#8e6534 24%,#e2c48e 57%,#95703d 88%,#25221d 100%);
+  }
+  .discovery-stage::after{width:100vw;left:-54vw;opacity:.40}
+  .discovery-stage .search-panel{border-radius:12px}
+  .discovery-stage .categories>button{min-height:62px}
+  .market-main .listings-section{padding-top:43px;padding-bottom:45px}
+  .market-main .listings-section::before{
+    background:
+      linear-gradient(180deg,rgba(19,21,22,0) 0%,rgba(19,21,22,.22) 30%,#151718 78%),
+      linear-gradient(109deg,#382d23 0%,#94703d 46%,#e2c48e 100%);
+  }
+  .market-main .owner-banner{
+    padding:28px 23px;
+    background:
+      radial-gradient(ellipse 95% 70% at 90% 0%,rgba(255,246,213,.70),transparent 76%),
+      linear-gradient(118deg,#8e6738,#e3c793 63%,#a17a45);
+  }
+  .market-main .owner-banner .eyebrow{color:#63451e}
+  .market-main .owner-banner p{max-width:unset;color:#46321d}
+  .market-main .owner-banner h2{color:#241b13}
+  .market-main .how{padding-top:52px;padding-bottom:56px}
+  .market-main .how::before{
+    background:linear-gradient(160deg,#121415 0%,#32271d 40%,#8e6b3a 85%,#b58a4f 100%);
+  }
+  .market-main .how .steps{gap:15px}
+  .market-main .how-card{min-height:0;padding:20px 19px 20px 75px}
+  .market-main .how-card .icon-well{right:17px;top:18px}
+  .market-main .how-card>div>b{left:20px;top:15px}
 }
 @media(prefers-reduced-motion:reduce){
-  body{background-attachment:scroll}
+  .market-main .property{transition:none}
 }

@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     if (isServer && process.env.VERCEL) {
       config.resolve.alias = {
         ...config.resolve.alias,
-        "cloudflare:workers": path.resolve(process.cwd(), "lib/vercel-cloudflare-env.ts"),
+        "estate-platform": path.resolve(process.cwd(), "lib/vercel-cloudflare-env.ts"),
       };
     }
     return config;
